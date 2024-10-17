@@ -1,2 +1,2 @@
 # PHOBIAS
-Arquivos Phobias
+Todos os arquivos do jogo Phobias
