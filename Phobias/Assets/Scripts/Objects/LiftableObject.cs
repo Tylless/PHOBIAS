@@ -116,7 +116,7 @@ public class LiftableObject : MonoBehaviour
         }
         
         }
-         if(onRange && PlayerMovement.instance.canLift && onGround)
+         if(onRange && PlayerMovement.instance.canLift)
         {
             canBeLifted = true;
         }else 
@@ -167,7 +167,7 @@ public class LiftableObject : MonoBehaviour
         }
     }
     private void OnTriggerEnter2D(Collider2D p) {
-        if(p.gameObject.tag == "Player" && onGround) 
+        if(p.gameObject.tag == "Player" && onGround || p.gameObject.tag == "Player" && p.gameObject.tag != "Player" && onGround) 
         {
             
             onRange = true;
@@ -178,7 +178,7 @@ public class LiftableObject : MonoBehaviour
         
     }
      private void OnTriggerStay2D(Collider2D p) {
-        if(p.gameObject.tag == "Player" && onGround) 
+        if(p.gameObject.tag == "Player" && onGround || p.gameObject.tag == "Player" && p.gameObject.tag != "Player" && onGround) 
         {
             
                 onRange = true;
@@ -191,7 +191,10 @@ public class LiftableObject : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D p) {
         
+        if(p.tag == "Player")
+        {
             onRange = false;
+        }
         
         
     }

@@ -586,7 +586,7 @@ public class PlayerMovement : MonoBehaviour
             canStand = false;
         }
         
-        if(other.gameObject.tag == ("Liftable"))
+        if(other.gameObject.tag == ("Liftable") || other.gameObject.tag == ("Liftable") && other.gameObject.tag != ("Liftable"))
         {
             if(crawling || lifting || pushing || hiding)
             {
@@ -613,7 +613,7 @@ public class PlayerMovement : MonoBehaviour
             canStand = false;
         }
        
-        if(other.gameObject.tag == ("Liftable"))
+        if(other.gameObject.tag == ("Liftable") || other.gameObject.tag == ("Liftable") && other.gameObject.tag != ("Liftable"))
         {
             if(crawling || lifting || pushing)
             {}
