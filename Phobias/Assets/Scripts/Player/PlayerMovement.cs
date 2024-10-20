@@ -136,11 +136,15 @@ public class PlayerMovement : MonoBehaviour
             
         if(Input.GetKeyDown(KeyCode.Y))
         {
-            RespawnController.instance.Respawn();
+        RespawnController.instance.Respawn();           
         }
             
     }
 
+    public void Die()
+    {
+        RespawnController.instance.Respawn();
+    }
    
 
     public void Noise()
